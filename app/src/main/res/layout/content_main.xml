@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.keelan.calculator.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize = "32sp"
+        android:text="@string/enter_message"
+        android:textColor="#B8860B"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/first_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType= "number"
+        android:layout_marginTop = "96dp"
+        android:layout_marginLeft="48dp"
+        android:textSize="48sp"
+        android:width="72dp"/>
+
+
+    <EditText
+        android:id="@+id/second_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType = "number"
+        android:layout_marginTop = "96dp"
+        android:layout_marginLeft = "256dp"
+        android:textSize="48sp"
+        android:width="72dp" />
+
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNumbers"
+        android:layout_centerInParent="true"
+        android:height="96dp"
+        android:width="96dp"
+        android:background="#7FFFD4"
+        android:text="@string/press_message"
+        android:textSize="20sp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_display_calculator_result">Calculator Result</string>
+    <string name="enter_message">Enter the two numbers you would like to add:</string>
+    <string name="press_message">Press to add</string>
+    <string name="comp_result">Computation Result</string>
+</resources>
