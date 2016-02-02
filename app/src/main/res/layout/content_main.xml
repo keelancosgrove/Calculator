@@ -42,12 +42,62 @@
     <Button android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="addNumbers"
-        android:layout_centerInParent="true"
-        android:height="96dp"
-        android:width="96dp"
+        android:layout_centerVertical="true"
+        android:height="24dp"
+        android:width="24dp"
         android:background="#7FFFD4"
-        android:text="@string/press_message"
+        android:text="@string/add_message"
+        android:textSize="24sp"
+        android:id="@+id/addButton"
+        />
+
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNumbers"
+        android:layout_centerVertical="true"
+        android:height="24dp"
+        android:width="24dp"
+        android:layout_toRightOf="@id/addButton"
+        android:background="#7FFFD4"
+        android:text="@string/sub_message"
+        android:textSize="24sp"
+        android:id="@+id/subButton"
+        />
+
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNumbers"
+        android:layout_centerVertical="true"
+        android:height="24dp"
+        android:width="24dp"
+        android:layout_toRightOf="@id/subButton"
+        android:background="#7FFFD4"
+        android:text="@string/mult_message"
+        android:textSize="24sp"
+        android:id="@+id/multButton"
+        />
+
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNumbers"
+        android:layout_centerVertical="true"
+        android:height="24dp"
+        android:width="24dp"
+        android:layout_toRightOf="@id/multButton"
+        android:background="#7FFFD4"
+        android:text="@string/div_message"
+        android:textSize="24sp"
+        android:id="@+id/divButton"
+        />
+
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayresult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="324dp"
         android:textSize="20sp"
         />
+
 
 </RelativeLayout>

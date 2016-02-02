@@ -6,10 +6,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,15 +55,33 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Checks if content in EditText is empty
+    public boolean isEmpty(EditText editText){
+        return (editText.getText().toString().trim().length()==0);
+    }
+
     // Called when the user presses the add button
     public void addNumbers(View view){
-        Intent intent = new Intent(this,DisplayCalculatorResult.class);
         EditText firstString = (EditText) findViewById(R.id.first_number);
         EditText secondString = (EditText) findViewById(R.id.second_number);
+        if (isEmpty(firstString) || isEmpty(secondString)){
+            return;
+        }
         int first_number = Integer.parseInt(firstString.getText().toString());
         int second_number= Integer.parseInt(secondString.getText().toString());
-        int sum = first_number+second_number;
-        intent.putExtra(EXTRA_MESSAGE,sum);
-        startActivity(intent);
+        TextView textView = (TextView) findViewById(R.id.displayresult);
+        int result;
+        switch (view.getId()) {
+            case R.id.addButton: result = first_number+second_number;
+                break;
+            case R.id.subButton: result = first_number-second_number;
+                break;
+            case R.id.multButton: result = first_number*second_number;
+                break;
+            case R.id.divButton: result = first_number/second_number;
+                break;
+            default: result=0;
+        }
+        textView.setText(((Integer) result).toString());
     }
 }
